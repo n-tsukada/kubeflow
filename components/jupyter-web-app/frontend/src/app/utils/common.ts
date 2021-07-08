@@ -41,7 +41,7 @@ export function createVolumeControl(vol: ConfigVolume, readonly = false) {
     size: [vol.size.value, [Validators.required]],
     path: [vol.mountPath.value, [Validators.required]],
     mode: [vol.accessModes.value, [Validators.required]],
-    class: ['{none}', []],
+    class: [vol.class.value, []],
     extraFields: fb.group({}),
   });
 
